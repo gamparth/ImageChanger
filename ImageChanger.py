@@ -54,5 +54,19 @@ class MainWindow(QMainWindow):
         fileMenu.addAction(fileNewAction)
         fileToolbar.addAction(fileNewAction)
 
+    def createAction(self,text,slot=None,shortcut=None,icon=None,tip=None,checkable=False):
+        action = QAction(text,self)
+        if icon is not None:
+            action.setIcon(QIcon(":/%s.png"%icon))
+        if shortcut is not None:
+            action.setShortcut(shortcut)
+        if tip is not None:
+            action.setToolTip(tip)
+            action.setStatusTip(tip)
+        if slot is not None:
+            action.triggered.connect(slot)
+        if checkable:
+            action.setCheckable(True)
+        return action
 
 
