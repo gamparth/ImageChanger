@@ -378,4 +378,4 @@ def main():
     app.exec_()
 
 
-main()
+
