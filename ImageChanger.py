@@ -4,12 +4,10 @@ import platform
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-import helpform
-#import newimagedlg
+import newimagedlg
 import resizedlg
-
+import  helpform
 import qrc_resources
-
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -340,13 +338,15 @@ class MainWindow(QMainWindow):
         if self.image.isNull():
             return
         if percent is None:
-            percent = (self.imagelabel.height()/self.image.height())*100
+            percent = (self.imagelabel.height()/self.image.height())*100 if self.imagelabel.height()/self.image.height() <1 else 100
             self.zoomspinbox.setValue(percent)
         factor = percent / 100.0
         width = self.image.width() *factor
         height = self.image.height()*factor
         image = self.image.scaled(int(width), int(height), Qt.KeepAspectRatio)
         self.imagelabel.setPixmap(QPixmap.fromImage(image))
+
+
 
     def editimageresize(self):
         rd = resizedlg.ResizeDlg(self.imagelabel.width(),self.imagelabel.height())
@@ -367,7 +367,7 @@ class MainWindow(QMainWindow):
         "3.6", platform.python_version(), QT_VERSION_STR, PYQT_VERSION_STR, platform.system()))
 
 
-def main():
+if __name__ == '__main__':
     app = QApplication(sys.argv)
     app.setOrganizationName("Abhi Ltd.")
     app.setOrganizationDomain("xxx.com")
