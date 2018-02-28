@@ -6,11 +6,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 1.Python 3.6 
+
 2.PyQt5 
 
 If you have already installed above tools than direct run ImageChanger.py
-  python3 ImageChanger.py
+```
+python3 ImageChanger.py
+```
 otherwise install them first and than run ImageChanger.py
+
+## Built With
+
+* [Python](https://docs.python.org/3/) - Language used
+* [PyQt](http://pyqt.sourceforge.net/Docs/PyQt5/) - GUI framework for Python
 
 
 
