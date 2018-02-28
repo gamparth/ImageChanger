@@ -1,8 +1,17 @@
 # ImageChanger
-
-#Introduction:- 
-  GUI software for single image manipulation
+GUI software for single image manipulation
   
-#Installation :-
-  If you have already installed Python 3.6 , PyQt5 than direct run ImageChanger.py
-     
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine
+
+### Prerequisites
+1.Python 3.6 
+2.PyQt5 
+
+If you have already installed above tools than direct run ImageChanger.py
+  python3 ImageChanger.py
+otherwise install them first and than run ImageChanger.py
+
+
+
+
