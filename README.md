@@ -15,6 +15,12 @@ python3 ImageChanger.py
 ```
 otherwise install them first and than run ImageChanger.py
 
+### Or
+You can directly run them as follows
+
+* Windows - Run ImageChanger.exe provided in setup folder.
+* Ubuntu - Run ImageChanger as executable file.
+
 ## Built With
 
 * [Python](https://docs.python.org/3/) - Language used
