@@ -97,7 +97,8 @@ class MainWindow(QMainWindow):
         self.addActions(editToolbar, (editZoomAction, editUnMirrorAction, editInvertAction))
 
         self.zoomspinbox = QSpinBox()
-        self.zoomspinbox.setRange(1, 100)
+        self.zoomspinbox.setMinimum(-500)
+        self.zoomspinbox.setMaximum(500)
         self.zoomspinbox.setSuffix(" %"),
         self.zoomspinbox.setValue(100)
         self.setToolTip("Zoom the image")
