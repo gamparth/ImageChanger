@@ -1,3 +1,4 @@
+#good code bro
 import sys
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -31,7 +32,7 @@ class NewImageDlg(QDialog,ui_newimagedlg.Ui_ImageChooserDlg):
         self.setColor()
         self.spinBoxWidth.setFocus()
 
-
+#aur kya chal rha hai munshii
     def getColor(self):
         color = QColorDialog.getColor(Qt.black,self)
         if color.isValid():
